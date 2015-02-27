@@ -1,0 +1,159 @@
+server {
+      listen   80;
+      server_name ec2-54-255-151-87.ap-southeast-1.compute.amazonaws.com;
+      # no security problem here, since / is alway passed to upstream
+       error_log     /home/ubuntu/haptik_api/logs/nginx.log;
+      root /home/ubuntu/haptik_api;
+      # serve directly - analogous for static/staticfiles
+      location ^~ /static/{
+          autoindex on;
+          root /home/ubuntu/haptik_api/api/;
+      }
+      location ^~ /media/{
+          autoindex on;
+          root /home/ubuntu/haptik_api/api/;
+      }
+      location /admin/media/ {
+          # this changes depending on your python version
+          root /usr/local/lib/python2.7/dist-packages/django/contrib;
+      }
+      location / {
+          proxy_pass_header Server;
+          proxy_set_header Host $http_host;
+          proxy_redirect off;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Scheme $scheme;
+          proxy_connect_timeout 300;
+          proxy_read_timeout 300;
+          proxy_pass http://127.0.0.1:8000/;
+      }
+  
+      location /chat/ {
+         proxy_pass_header Server;
+          proxy_set_header Host $http_host;
+          proxy_redirect off;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Scheme $scheme;
+          proxy_connect_timeout 300;
+          proxy_read_timeout 300;
+          proxy_pass http://127.0.0.1:8085/chat/;
+      }
+  
+     location /athena2/{
+          autoindex on;
+          alias /home/ubuntu/athena2/$1;
+
+
+     }
+ 
+     location /athena2{
+         autoindex on;
+          alias /home/ubuntu/athena2/$1;
+     }
+ 
+     location /chatlogin{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+     }
+     location /chatlogin/{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+     }
+ 
+     # what to serve if upstream is not available or crashes
+     # error_page 500 502 503 504 /media/50x.html;
+ }
+ 
+ 
+ server {
+     listen   443;
+     server_name ec2-54-255-151-87.ap-southeast-1.compute.amazonaws.com;
+     # no security problem here, since / is alway passed to upstream
+     error_log     /home/ubuntu/haptik_api/logs/nginx.log;
+     root /home/ubuntu/haptik_api;
+     #ssl on;
+     #ssl_certificate /etc/nginx/ssl/haptik.mobi2.crt;
+     #ssl_certificate_key /etc/nginx/ssl/haptik.mobi.2.key;
+     # serve directly - analogous for static/staticfiles
+     location ^~ /static/{
+         autoindex on;
+         root /home/ubuntu/haptik_api/api/;
+     }
+     location ^~ /media/{
+         autoindex on;
+         root /home/ubuntu/haptik_api/api/;
+     }
+     location /admin/media/ {
+         # this changes depending on your python version
+         root /usr/local/lib/python2.7/dist-packages/django/contrib;
+     }
+      location / {
+          proxy_pass_header Server;
+          proxy_set_header Host $http_host;
+          proxy_redirect off;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Scheme $scheme;
+         proxy_connect_timeout 300;
+         proxy_read_timeout 300;
+         proxy_pass http://127.0.0.1:8000/;
+     }
+ 
+     location /chat/ {
+         proxy_pass_header Server;
+         proxy_set_header Host $http_host;
+         proxy_redirect off;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Scheme $scheme;
+         proxy_connect_timeout 300;
+         proxy_read_timeout 300;
+         proxy_pass http://localhost:8085/chat/;
+     }
+     location /athena2/{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+     }
+ 
+     location /athena2{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+     }
+     location /chatlogin{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+     }
+     location /chatlogin/{
+         autoindex on;
+         alias /home/ubuntu/athena2/$1;
+
+    }
+
+     location /blog/ {
+          try_files $uri $uri/ /blog/index.php?q=$uri&$args;
+  
+      }
+  
+      location /blog {
+          try_files $uri $uri/ /blog/index.php?q=$uri&$args;
+      }
+  
+      location /tech/ {
+          try_files $uri $uri/ /tech/index.php?q=$uri&$args;
+      }
+  
+      location /tech {
+          try_files $uri $uri/ /tech/index.php?q=$uri&$args;
+      }
+  
+      location ~ \.php$ {
+          try_files $uri =404;
+          fastcgi_split_path_info ^(.+\.php)(/.+)$;
+          fastcgi_pass unix:/var/run/php5-fpm.sock;
+          fastcgi_index index.php;
+          include fastcgi_params;
+      }
+
+}
+       server {
+         server_name blog.haptik.co;
+         rewrite ^ $scheme://haptik.co/blog$request_uri redirect;
+         }

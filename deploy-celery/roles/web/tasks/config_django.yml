@@ -1,0 +1,21 @@
+--- 
+#segregte the django db stuff we do for ease of deploying
+
+- name: Django syncdb
+  django_manage: command=syncdb
+                 app_path={{app_code_dir}}
+                 virtualenv={{virtualenv_dir}}
+                 settings={{django_settings}}
+                 pythonpath={{app_code_dir}}
+  remote_user: ubuntu
+
+
+
+- name: Django migrate
+  django_manage: command=migrate
+                 app_path={{app_code_dir}}
+                 virtualenv={{virtualenv_dir}}
+                 settings={{django_settings}}
+                 pythonpath={{app_code_dir}} 
+  remote_user: ubuntu
+

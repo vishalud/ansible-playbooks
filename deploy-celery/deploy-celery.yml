@@ -1,0 +1,18 @@
+---
+# This playbook deploys the whole application stack in this site.
+
+- name: apply common configuration to all nodes
+  hosts: celeryservers
+  user: "{{ deploy_user }}"
+  sudo: yes
+
+  roles:
+    - common
+
+
+- name: deploy nginx and configure web servers
+  hosts: celeryservers
+  user: "{{ deploy_user }}"
+
+  roles:
+    - web

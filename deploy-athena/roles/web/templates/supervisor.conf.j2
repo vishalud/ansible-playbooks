@@ -1,0 +1,8 @@
+[program:{{app_name}}]
+
+#command={{virtualenv_dir}}/bin/gunicorn {{django_settings_dir_name}}.wsgi:application
+command=/home/ubuntu/haptik_api/start_gunicorn.sh
+directory={{app_code_dir}}
+user={{deploy_user}}
+stdout_logfile = /home/ubuntu/haptik_api/logs/supervisor.log
+stderr_logfile = /home/ubuntu/haptik_api/logs/supervisor.log

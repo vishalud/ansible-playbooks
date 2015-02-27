@@ -1,0 +1,5 @@
+[webservers]
+#haptik-api-staging-1 ansible_ssh_host=54.255.148.83
+haptik-api-test ansible_ssh_host=54.169.254.37
+[dbservers]
+# add a database IP address here, such as 127.0.0.1

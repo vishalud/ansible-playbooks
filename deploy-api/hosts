@@ -1,0 +1,9 @@
+[webservers]
+#ansible-deploy-test ansible_ssh_host=54.149.22.215
+#haptik-api-1  ansible_ssh_host=54.169.112.113
+#haptik-api-2 ansible_ssh_host=54.169.91.145
+#haptik-api-3 ansible_ssh_host=54.169.0.113
+#haptik-website ansible_ssh_host=haptik.co
+haptik-api-test ansible_ssh_host=54.169.254.37
+[dbservers]
+# add a database IP address here, such as 127.0.0.1

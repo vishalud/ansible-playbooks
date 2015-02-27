@@ -1,0 +1,52 @@
+###
+# Pulls the code from a remote Git repository, configures the web application,
+# creates a virtualenv, and does the django magic
+#
+---
+
+#- name: Ensure github is in the known_hosts file
+#  action: sshknownhosts host=github.com state=present
+#  remote_user: ubuntu
+#  sudo: True
+#  sudo_user: root
+- name: ssh-config changes for multiple keys 
+  template: src=ssh-config.j2 dest=/home/ubuntu/.ssh/config
+
+- name: Get release timestamp
+  command: date +%Y%m%d
+  register: timestamp
+
+- name: Name release directory
+  command: echo "/home/ubuntu/gitclones/{{ timestamp.stdout }}"
+  register: release_path
+
+- name: Create release directory
+  file: state=directory owner=ubuntu group=ubuntu recurse=yes path={{ release_path.stdout }}
+  sudo: True
+  sudo_user: root
+
+- name: checkout latest web app code from github and append current_date
+  git: repo=git@github.com:hellohaptik/haptik_api.git key_file=/home/ubuntu/.ssh/id_rsa.github.hellohaptik.api dest="{{ release_path.stdout }}" accept_hostkey=yes
+
+- name: symlink release directory to latest
+  file: src="{{ release_path.stdout }}" dest=/home/ubuntu/gitclones/latest
+  sudo: true
+  sudo_user: root
+
+- name: symlink production_logs to logs 
+  file: src=/home/ubuntu/prod_logs dest=/home/ubuntu/haptik_api/logs state=link
+  sudo: true
+  sudo_user: root
+
+- name: check if virtualenv already exists
+  stat: path={{virtualenv_dir}}
+  register: venv_dir
+
+- name: create virtualenv for Django web application
+  shell: virtualenv {{virtualenv_dir}}
+  when: venv_dir.stat.isdir is not defined
+
+- name: restart haptik supervisor process 
+  shell: /home/ubuntu/Envs/vhaptikenv/bin/supervisorctl restart haptik
+
+

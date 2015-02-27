@@ -1,0 +1,6 @@
+[webservers]
+#haptik-api-test ansible_ssh_host=54.169.254.37
+haptik-api-1  ansible_ssh_host=54.169.112.113
+haptik-api-2 ansible_ssh_host=54.169.91.145
+haptik-api-3 ansible_ssh_host=54.169.0.113
+

@@ -1,0 +1,7 @@
+##
+# these scripts set up a complete web application stack that is connected
+# to the remote database backend the other deployment scripts set up
+#
+---
+
+- include: config_web_app.yml tags=website-git
