@@ -1,0 +1,19 @@
+---
+# For more information about default variables see:
+# http://www.ansibleworks.com/docs/playbooks_variables.html#id26
+#
+ sudo_users:
+  - { name: '%dev', nopasswd: yes }
+#  - { name: 'bar', nopasswd: no }
+#  - name: '%foo'
+#    nopasswd: yes
+#    commands: '/bin/ls'
+#  - name: 'bar'
+#    nopasswd: no
+#    commands: '/bin/nano'
+#  - name: '%foo'
+#    nopasswd: yes
+#    commands: '/bin/nano /etc/hosts'
+
+# list of username or %groupname
+#sudo_users: []

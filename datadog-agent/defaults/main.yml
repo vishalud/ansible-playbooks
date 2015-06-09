@@ -1,0 +1,6 @@
+---
+datadog_api_key: "d61447f6ae1b90747af3aecbbaa957d2"
+
+# Comma seperated list of tags
+datadog_tags: ""
+

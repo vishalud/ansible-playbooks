@@ -1,0 +1,7 @@
+- hosts: tag_ns_true
+  user: ec2-user
+  sudo: yes
+  roles: 
+  - role: ansible-dns
+    dns_domain: us-east.internal.webengage.com
+    dns_nameservers: ['54.83.54.124', '54.83.54.144']

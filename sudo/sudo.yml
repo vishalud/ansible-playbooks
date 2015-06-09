@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  remote_user: ec2-user
+  sudo: yes
+  roles:
+    - sudo
+  vars:
+    sudo_users:
+      - name: '%dev'
+        nopasswd: yes
+        commands: '/usr/bin/tail, /bin/more, /bin/grep, /bin/cat, /usr/bin/less, /bin/awk, /bin/sed, /bin/cut, /bin/sort'

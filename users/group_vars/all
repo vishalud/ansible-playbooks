@@ -1,0 +1,95 @@
+---
+
+users:
+  - username: vishal
+    name: Vishal Uderani
+    groups: ['wheel','dev']
+    uid: 10001
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxjuBMxivdI09l8gApml8OjIi5/7PxfMjo3276nyfG5q3Pb3C1XLqiWnc+pAPZ9pO+6/duKusbh2on16mC/XyT3tQ2f5IS0W8mjtlDbUJ0u/hsqfTd0w5euC4afvJeB59wvVL+6m430LdURtemdPfGNFPwjaE2WsxcToMkbdjww6mHv4gIYGEYfFMnQYxDL11S7moTE2tsno9qjZFDm8QQ7AurMF4ZumYrtUM26b3/wii0gs1Z4AUgVgrcXK8IAiwQBW4z2TrAHIN0yL7rNa1zbb0ioVAWpF/8B/t2p8dT9f/8IZElJ3665j0FuR/elpXSExCCEoNVzfpfVZKs/MFH vishal@Vishals-MacBook-Pro-2.local"
+
+  - username: nitin
+    name: Nitin Bansal
+    groups: ['wheel','dev']
+    uid: 10002
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE0Ku1j21p+7HISP/s5yE219VGHO86s2cqmOr4z0ZaFPvrn4vQYFIffGeZhiD/7YffmkZL4PhOJKrDdcmXlwVLHOthj/rn1eOfvViyp7W7gKEc7Vbxl6bZphdSRsPznRT8386rTlw2oGOIEQNrcoTQzwTATZKsTgiBTqKBWF4egnAL3dmJuvZkKcFAXriOG0eQkEv64ffqi2n+efPCWF1xoNl2dBrNDrfeBRxGFxeZRaMRaeZ0supwd+EJ+Gt6wZPTGO+l5i3Lu+qQMfQaXzTFWC6YaAW6G5sU80pk5skQEUw5/8V7y74Fi2cR2712w++gMu6ZUZJNk+JKl/Y2eosT"
+
+  - username: akhil
+    name: Akhil Handoo
+    groups: ['wheel','dev']
+    uid: 10003
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5VlFk5viwTEXAEm/EJMlv7WsfHQXe4V+h5Hg7J7to+QyiHkwmsYet0NmaZ2wgm3EwqMBX36vxoBSNIYQlo3UxNTKA6ai6ZVt7gwI6sm0vyX8zROAC+aMOAcEZv0SOMNMYWJ4u8immI1Er+64oxxCE5HXJqjgXKe0ecp1vKBIwDHFyRwEk5NO555ILYpgXT7fcIuzw/G8QKMTXWBhXiInEFrpVL4KqZ8aYpyv8aBH6ki1zIlR4HboC6zEJ1K9u4LJjZ86h0Nk+d5vkw3myZM6uaADHNZUSlEkWugRV+1OmJ47w8oT6Zdso3OKv7XiOsTkH4QuIO9a5WXhluHrzaKA9 Webengage2@dabba-2.local"
+
+
+  - username: arpit
+    name: Arpit Agarwal
+    groups: ['wheel','dev']
+    uid: 10004
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+dZP9PWOQLl48QemZe8iYiZ5ZqEML47C34Spdvlz8TtFZ4sDV1kScOUsb+Z/+BOskSVhAj4+KrCVWgpOzfThaEfbLy5TpWP/t30DjrqvNLeZSaLzrp4K021VP8eTDbx0ZBuHpkRkfwt5D30R6fb891BlwjW1SD8Kq0vw+zXzusd5FBmjSdZeKN04QvogFpKaWMgpaQef756graqLpcI3GUUAC8JIh92sv8J+YF6UNAjdAlWiVStbTf6SyIsYkaSSwrvfHybufN6+u0seKZK8AVU6b/TWoHAgqki1aqxtgehMO0jEh36UrujYOqu2clEuF/T9ZNEL32kJpI8qwfFlp arpit@webklipper.com"
+
+
+  - username: rakesh
+    name: Rakesh P
+    groups: ['wheel','dev']
+    uid: 10005
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNNBnJsKVV3emaUeabKIukugnxuR2IrkDmSVyonBx7bMjH1tsqk4L24wgEqxIzSbmswWzk7ncsi1bKuKj3WHoutmGBmhTDFULMShwvnqIk59zdBGjyfAAkR8BHpT7nG8FlFOTdApMzWKc0mVyEWhqEF1wyjx5MYZQkUG0ZGGloXoqJ9xJsv6MbEPAI7EIsy21TIC9VngWtaGXW1So0BKrWZUx6LcQnSII/ss5vag2GZFHm/oSNfA3wWnH7lT4AEiim6+n0vcKBKhH26JEJ066+TMkTbxIrDWshUkYNbMI3AIquYW5B/OZvxl/ORwkKNLxk80//bkepbAsqbjOtKBrx rakesh@webklipper.com"
+
+
+  - username: aayush
+    name: Aayush Mishra
+    groups: ['wheel','dev']
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    uid: 10006
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY5gK5dxrcWGOnxCr+X7/gVBQYQ7/l3FMfuYfgo0i3cAJmoNxA408C7oF6jFm3gD0MfEUDLpk+BdJ5D3FvNm024nkPrBRcxx+jeeFR91eKQyli8P6Ue3m3yW+D7anZEpg4h9N6Nbd5ETimmlvI0GLYYrHlHmRPtLuG1vdAqwSyJhXQk4jHXOPLbWbOJtQ8uNWkNk2r5BQIU+kUV2q156I4cdlVHvoA4KQPyMNSywXvaZJWQ6csEyUGPsxFKMnbm9jFN87ktuB2c+xoppdqCau6ELllkfbbA2CtT0xRW+azzzPPZSH32Re0z6XA/5oLEFWZZG6kE6kmkBxhjWXUIF8L aayush@webklipper.com"
+
+
+  - username: vikas
+    name: Vikas Sinha
+    groups: ['wheel','dev']
+    uid: 10007
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDM0zNVN6JSkYrCSnq4S1/uZvDE28tML7I40lYUoB1lT4z7wBXRrlmNG2O2CUa9f7qxF6CbOBSJHliS3P9joKNnOzH3oMCurNGnjyJyYGMN2QUD2W0m/olYSFVWuCKeca51rP0Ik6zCJSJVDgK10zguh9eineTRNJLC3TEOppRe0viGWs7DHJCjCh9jhq/N0FTZt21d04Kdv+H19vQhAvr3VL4Rw5fR64f+I8LnAWKZ3eqvyhpfBG2w6Zrn7rA0SM3ItLG86QG/00fpCRs3EACWB63aOplgPTz4S27b1zO48FSb9Jeeren1f9yPVF7e/bum4mla3pqMfRMkfwz9ndar vikas@webklipper.com"
+ 
+  - username: prashant
+    name: Prashant Achrekar
+    groups: ['wheel','dev']
+    uid: 10008
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC696p4Fm8PSh3Sn4T24lwfXQgeZcUFQeair34/IGBQCNKiKSrEgot/3rpgZ0p+Oaa7yDVUq+NvslJLna1D+og0nsZv62qzwOwCYPx68/bCrSk2IOyUYA8Ddjl6RLgfCrSDFFo3reJaO28InJm/Dl4Tp0nbE83/ixcpHJvgls0J1IUAOxV717CU7OJ7ujp0L+Cf4XxNUY/fyDFlVck5OQV9CtamfFpQXmDp0fJnmpFCcxbeCscypOwbYvMkx4dBP96CVAP1boirLyvc7MeqpelKuAFCCZLCgZhUdnCpYUZ/tXD+5gJ2FrNgsZSTh60zsUKsFyBv4lktPd9R5GmBDlP1 prashant@webklipper.com"
+ 
+  - username: siya
+    name: Siya Kakodkar
+    groups: ['wheel','dev']
+    uid: 10009
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDv5rov99Ry+zawrbC9hIN8p2oDhgp7WwZbl/1nYpL3WcBIIi9FHjkht3dlhafuNXFt/p4ejvC+8MCZEbkUiguf1EJHxRdvjlY48h883uR/JvQSd1lroF26GTz/JE3DY0l6cBwqpx43qj83ITKM/BiRHkAykPEnutqoNhBTQdtiUV1ZH28LdJuI8Fe5V44cvGJ4fAZgAxpzm1mTiPHiPkT/g7yBuaZDcBr2g7kcMHnU8ECkc8T30cd+hiWKpAeInfh7h9/V2T3MKf75sU+U2NqTvUNe2jhTBMgo6NEHOi/ePXLA270ijelmNIOfG2QCqV4JmILDk9bVFiPyFpb/hg1v siya@webklipper.com"
+
+  - username: chirag
+    name: Chirag Gada
+    groups: ['wheel','dev']
+    uid: 10010
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClV0uNjvFQ4JpAslwgBGDajtGWJ7wzSbuR80Oh9Oljtwpn0xk0qzNjkt1duZJJxsBkGCJvyWNOzngDUBhhz692yKqTW/s8HI3FnHqp9IT6qlWIURZYyk2oGH5VA86mhddZ7po+YF61wTu2MD8Jx08UzSijdknn0+mv0NwSh1Ybl/+1vpIkBMiK7fsk01mwGABPHB97WF/AYcWqe1AkQ+nIrp1TyLBrqHPgztUITX5h9WKZeGrMt84TZgrefim0tNd1IuGai4lVLN+8tm8A8o9HzS8iNTAwiDK8qJftgGr2Fl0qT4Esw0hZUU7Z/WRn0F2sAzHr45insmUIlLIfYb1Z chirag@Chirag.local"
+
+  - username: lithin
+    name: Lithin Thomas
+    groups: ['wheel','dev']
+    uid: 10011
+    password: $1$0SJnrLZ8$J/mk34Cn96BdwwRX/jhm60
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDb3eQ3py5nnj5h5/twt5Sft/iHvmsgJcmcr1keZjTHKSU88TUOgYqbZ04Avc1Q4EwV65WJZ3MP7537uzhEX6DsQNiLHdosGnR8AHkQMQbzgAIN3/GjTv//91OteX04YZm4aV7UeEmd+pxk74FXXEh3ZXga6Ugj9Bh82WLuUTpoUW/staXRqngYnMz7PfGWf/NDyG+NZywOE/k/80bNA5Dkgo4qXm9/QkeFstLaiY9IQvFQHOgwmY4jkAIfuw9FYmIrs+oxjIcKc3qldrI35vCeMnz3OG9TWIq3NMdo9YKRAEyREhwg6cdCV75Xn67Jyx3vUkGgj5Ls0OeEaAVDGvyD lithin@webklipper.com"
+#users_deleted:{}
