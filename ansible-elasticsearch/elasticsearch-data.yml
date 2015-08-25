@@ -1,0 +1,23 @@
+- hosts: elasticsearch_data
+  user: ec2-user
+  sudo: yes
+  roles:
+    - role: ansible-elasticsearch
+      es_default_es_heap_size: 9g
+      es_etc_cluster_name: webengage
+      es_etc_node_master: 0
+      es_etc_node_data: 1
+      es_etc_bootstrap_mlockall: 1
+      es_etc_gateway_recover_after_nodes: 2
+      es_etc_gateway_expected_nodes: 3
+      es_etc_gateway_recover_after_time: 10m
+      es_etc_path_data: /vol/es1,vol/es2
+      es_etc_node_name: "{{ ansible_fqdn }}"
+      es_etc_network_host: "{{ ansible_eth0.ipv4.address }}"
+      es_etc_discovery_zen_ping_multicast_enabled: false
+      es_etc_discovery_zen_ping_unicast_hosts: ["10.179.171.70", "10.153.140.103", "10.51.190.204"]
+      es_etc_discovery_zen_minimum_master_nodes: 2
+      es_plugins:
+        - name: elasticsearch-jetty-1.2.1
+          url: https://oss-es-plugins.s3.amazonaws.com/elasticsearch-jetty/elasticsearch-jetty-1.2.1.zip
+          plugin_file: jetty-1.2.1/elasticsearch-jetty-1.2.1.jar
