@@ -1,0 +1,27 @@
+---
+
+#
+# variables needed to be defined in user's playbook
+#
+
+
+
+#
+# user-configurable defaults
+#
+
+java_version: 8
+
+
+jdk7:
+    jdk_version:      1.7.0_80
+    jdk_tarball_file: jdk-7u80-linux-x64.rpm
+    jdk_tarball_url:  http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.rpm
+
+jdk8:
+    jdk_version:      1.8.0_51
+    jdk_tarball_file: jdk-8u51-linux-x64.rpm
+    jdk_tarball_url:  http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.rpm
+
+
+jdk_download_path: /tmp
